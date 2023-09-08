@@ -20,6 +20,3 @@ npm run preview
 docker build -t search-books .
 docker run -dp 127.0.0.1:3000:80 search-books
 ```
-## Demo
-
-[https://search-books-phi.vercel.app/](https://search-books-phi.vercel.app)
