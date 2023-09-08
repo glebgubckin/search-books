@@ -21,3 +21,16 @@ test('search and pick book', async ({ page }) => {
   expect(bookTitle).toBeTruthy();
   expect(bookCover).toBeTruthy();
 });
+
+test('no results found', async ({ page }) => {
+  await page.goto('')
+
+  await page.fill('#search', 'qwaserdftyghuijkopl');
+
+  await page.press('#search', 'Enter');
+
+  await page.waitForLoadState('networkidle');
+
+  const cardsCount = await page.$$eval('div[id^="book"]', (cards) => cards.length);
+  expect(cardsCount).toBe(0);
+})

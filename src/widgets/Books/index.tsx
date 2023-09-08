@@ -50,7 +50,7 @@ const Books: FC<{ searchQuery: string }> = ({ searchQuery }) => {
               Found {data?.pages[0].data.totalItems} results
             </span>
           )}
-          <div id='books' className={styles.books}>
+          <div className={styles.books}>
             {data?.pages.map((page) => {
               return page?.data.items.map((book) => (
                 <Book key={book.id} book={book} />
