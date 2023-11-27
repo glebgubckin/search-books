@@ -1,6 +1,6 @@
 # Search books
 
-## Установка
+## Install
 
 ```bash
 git clone https://github.com/glebgubckin/search-books
@@ -12,7 +12,7 @@ cd search-books
 npm run build
 npm run preview
 ```
-Приложение будет запущено по адресу *http://localhost:3000*
+App will be started at *http://localhost:3000*
 
 ## Docker
 
